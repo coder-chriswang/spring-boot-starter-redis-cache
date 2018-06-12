@@ -26,11 +26,10 @@ This is spring cache starter.
     spring.redis.pool.max-wait=-1
     spring.redis.database=1
 ```
-- 4、serviceImpl类及接口实现方法上增加注解：
-(1)类上@CacheConfig
-(2)方法上用@分割，后面加上过期的时间，单位为秒
+- 4、一般来说，我们习惯在serviceImpl类及接口实现方法上增加注解,Controller类同样可以加：
+方法上用@分割，后面加上过期的时间，单位为秒
 ```
-   @Cacheable(value = "UserMacRelationService.findAllUserMacInfo@120", keyGenerator = "keyGenerator")
+    @Cacheable(value = "UserMacRelationService.findAllUserMacInfo@120", keyGenerator = "keyGenerator")
 ```
 # 联系
 - Chris chris_coder@163.com
