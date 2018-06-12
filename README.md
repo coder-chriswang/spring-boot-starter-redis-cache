@@ -10,11 +10,11 @@ This is spring cache starter.
 - 1、下载源码，install至本地仓库
 - 2、本地工程pom文件中引入：
 ```
-	<dependency>
-		<groupId>net.ytoframework</groupId>
-		<artifactId>yto-framework-starter-cache</artifactId>
-		<version>1.0.0</version>
-	</dependency>
+    <dependency>
+	<groupId>net.ytoframework</groupId>
+	<artifactId>yto-framework-starter-cache</artifactId>
+	<version>1.0.0</version>
+    </dependency>
 ```
 - 3、配置文件中增加redis config:
 ```
@@ -27,8 +27,8 @@ This is spring cache starter.
     spring.redis.database=1
 ```
 - 4、serviceImpl类及接口实现方法上增加注解：
-类上@CacheConfig
-方法上用@分割，后面加上过期的时间，单位为秒
+(1)类上@CacheConfig
+(2)方法上用@分割，后面加上过期的时间，单位为秒
 ```
    @Cacheable(value = "UserMacRelationService.findAllUserMacInfo@120", keyGenerator = "keyGenerator")
 ```
