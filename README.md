@@ -1,5 +1,5 @@
 # spring-boot-starter-redis-cache
-This is spring cache starter.
+这是基于spring cache开发的starter，已在生产环境多种业务情景下得以验证，请放心使用。
 
 ## 几个特点
 - 实现了基于注解中的缓存时间设置
