@@ -9,7 +9,7 @@
 ## 使用步骤
 - 1、下载源码，install至本地仓库
 - 2、本地工程pom文件中引入：
-```
+```xml
     <dependency>
 	<groupId>net.ytoframework</groupId>
 	<artifactId>yto-framework-starter-redis-cache</artifactId>
@@ -17,7 +17,7 @@
     </dependency>
 ```
 - 3、配置文件中增加redis config:
-```
+```properties
     spring.redis.host=localhost
     spring.redis.port=6379
     spring.redis.pool.max-idle=8
@@ -28,7 +28,7 @@
 ```
 - 4、一般来说，我们习惯在serviceImpl类及接口实现方法上增加注解,Controller类同样可以加：
 方法上用@分割，后面加上过期的时间，单位为秒
-```
+```java
     @Cacheable(value = "UserMacRelationService.findAllUserMacInfo@120", keyGenerator = "keyGenerator")
 ```
 # 联系
